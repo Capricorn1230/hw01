@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+        function getvalue(){
+            var n = document.getElementById("te").value;
+            if (n > 0 && n < 10) {
+                document.write("<table style='border-collapse: collapse;'>");
+                for (var i = 1; i <= n; i++) {
+                    document.write('<tr>');
+                    for (var j = 1; j <= i; j++){
+                        document.write('<td style="border:#000000 1px solid;width:4em;height:2em;text-align:center;">'+ j + "*" + i  + "=" + j*i +'</td>'); 
+                    }
+                    document.write('</tr>');
+                }
+                document.write('</table>');
+            } 
+            else alert("请输入1-9之间的数字！")
+        }
+    </script>  
+</head>
+
+<body>
+    <p>请输入一个数字（范围1-9）</p>
+    <input type="text" id="te">
+    <input type="button" value="确认" onclick="getvalue()">
+</body>
+
+</html>
